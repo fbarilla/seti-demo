@@ -40,7 +40,8 @@ RUN pip install scikit-learn
 RUN pip install pyspark
 RUN pip install ibmseti
 # RUN apt-get install -y libxml2-dev libxmlsec1-dev
-RUN apt-get install default-jre
+RUN apt-get update
+RUN apt-get install -y default-jre
 
 WORKDIR /root
 RUN wget https://d3kbcqa49mib13.cloudfront.net/spark-2.2.0-bin-hadoop2.7.tgz
