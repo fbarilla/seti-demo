@@ -38,7 +38,7 @@ RUN pip install scikit-learn
 RUN pip install pyspark
 # RUN apt-get install -y libxml2-dev libxmlsec1-dev
 
-RUN mv /usr/local/samples/spark-2.2.0-bin-hadoop2.7.tgz /root
 WORKDIR /root
+RUN wget https://d3kbcqa49mib13.cloudfront.net/spark-2.2.0-bin-hadoop2.7.tgz
 RUN tar -xvf spark-2.2.0-bin-hadoop2.7.tgz
 
