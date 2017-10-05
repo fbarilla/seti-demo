@@ -15,6 +15,8 @@ RUN curl --fail -X POST -d @/etc/NAE/AppDef.json https://api.jarvice.com/jarvice
 COPY samples /usr/local/samples
 COPY scripts/sample_notebook.sh /usr/local/scripts/sample_notebook.sh
 
+RUN apt-get update
+
 #add Jupyter
 RUN pip install --upgrade pip
 RUN pip install notebook pyyaml
@@ -38,6 +40,7 @@ RUN pip install scikit-learn
 RUN pip install pyspark
 RUN pip install ibmseti
 # RUN apt-get install -y libxml2-dev libxmlsec1-dev
+RUN apt-get install default-jre
 
 WORKDIR /root
 RUN wget https://d3kbcqa49mib13.cloudfront.net/spark-2.2.0-bin-hadoop2.7.tgz
