@@ -35,5 +35,10 @@ RUN apt-get install -y openssh-server
 RUN pip install cython
 RUN apt-get install -y python-scipy
 RUN pip install scikit-learn
-RUN apt-get install -y libxml2-dev libxmlsec1-dev
+RUN pip install pyspark
+# RUN apt-get install -y libxml2-dev libxmlsec1-dev
+
+RUN mv /usr/local/samples/spark-2.2.0-bin-hadoop2.7.tgz /root
+WORKDIR /root
+RUN tar -xvf spark-2.2.0-bin-hadoop2.7.tgz
 
