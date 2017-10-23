@@ -38,14 +38,13 @@ RUN pip install cython
 RUN apt-get install -y python-scipy
 RUN pip install scikit-learn
 RUN pip install pyspark
-<<<<<<< HEAD
+
 # RUN apt-get install -y libxml2-dev libxmlsec1-dev
 =======
 RUN pip install ibmseti
 # RUN apt-get install -y libxml2-dev libxmlsec1-dev
 RUN apt-get update
 RUN apt-get install -y default-jre
->>>>>>> 5a26184f7c2ec5d779124579c03bc37f113ed25a
 
 WORKDIR /root
 RUN wget https://d3kbcqa49mib13.cloudfront.net/spark-2.2.0-bin-hadoop2.7.tgz
