@@ -40,7 +40,7 @@ RUN pip install scikit-learn
 RUN pip install pyspark
 
 # RUN apt-get install -y libxml2-dev libxmlsec1-dev
-=======
+
 RUN pip install ibmseti
 # RUN apt-get install -y libxml2-dev libxmlsec1-dev
 RUN apt-get update
